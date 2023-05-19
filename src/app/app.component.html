@@ -1,10 +1,21 @@
-<h1>{{title}}</h1>
+<!-- <h1 *ngIf="title ; else mensagemPadrao">{{title}}</h1>
 
-<button (click)="chamarFuncao()">Chamar evento</button>
+<ng-template #mensagemPadrao>
+    <h1>
+        Bem vindo ao treinamento de Angular
+    </h1>
+</ng-template> -->
 
-<input [(ngModel)]="title">
-
-<img [src]="imgURL">
-
+<span [ngSwitch]="title">
+    <p *ngSwitchCase="'Olá!'">
+        Esse é o parágrafo verdadeiro!
+    </p>
+    <p *ngSwitchCase="false">
+        Esse é o parágrafo falso!
+    </p>
+    <p *ngSwitchDefault>
+        Esse é o parágrafo default!
+    </p>
+</span>
 
 <router-outlet></router-outlet>

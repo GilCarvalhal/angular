@@ -6,22 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular';
+  title = 'Olá!';
 
-  imgURL = "/assets/property-binding.png/";
   constructor() { }
 
-  chamarFuncao() {
-    console.log('Esse é um clique!');
-  }
 
-  //4 tipos de data binding
-  // Interpolação {{title}}
+  //ngIf usando complemento else, usamos para exibir ou ocultar elementos tomado por decisão lógica.
 
-  //Property Binding <img [src]="imgURL">
-
-  //Event Binding <button (click)='chamarFuncao()'>
-
-  //Two-Way Data Binding 
-
+  //ngSwitch 
 }
