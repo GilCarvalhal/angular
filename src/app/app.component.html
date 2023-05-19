@@ -1,21 +1,11 @@
-<!-- <h1 *ngIf="title ; else mensagemPadrao">{{title}}</h1>
+<table>
 
-<ng-template #mensagemPadrao>
-    <h1>
-        Bem vindo ao treinamento de Angular
-    </h1>
-</ng-template> -->
+    <tr *ngFor="let cliente of clientes">
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.sexo}}</td>
+        <td>{{cliente.idade}}</td>
+    </tr>
 
-<span [ngSwitch]="title">
-    <p *ngSwitchCase="'Olá!'">
-        Esse é o parágrafo verdadeiro!
-    </p>
-    <p *ngSwitchCase="false">
-        Esse é o parágrafo falso!
-    </p>
-    <p *ngSwitchDefault>
-        Esse é o parágrafo default!
-    </p>
-</span>
+</table>
 
 <router-outlet></router-outlet>

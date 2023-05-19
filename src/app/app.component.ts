@@ -8,10 +8,32 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Olá!';
 
+  clientes = [
+    {
+      nome: 'Alexandre',
+      sexo: 'Masculino',
+      idade: 20
+    },
+    {
+      nome: 'Roberto',
+      sexo: 'Masculino',
+      idade: 22
+    },
+    {
+      nome: 'Maura',
+      sexo: 'Feminino',
+      idade: 23
+    },
+    {
+      nome: 'Claudia',
+      sexo: 'Feminino',
+      idade: 21
+    },
+  ]
+
   constructor() { }
 
+  //Diretivas estruturais
+  //*ngFor 
 
-  //ngIf usando complemento else, usamos para exibir ou ocultar elementos tomado por decisão lógica.
-
-  //ngSwitch 
 }
