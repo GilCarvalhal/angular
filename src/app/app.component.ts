@@ -1,53 +1,27 @@
-import { Component, OnInit, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnChanges, DoCheck {
-  title = 'componentes-angular';
+export class AppComponent {
+  title = 'Angular';
 
-  constructor() {
-    console.log('Componente construtor');
+  imgURL = "/assets/property-binding.png/";
+  constructor() { }
+
+  chamarFuncao() {
+    console.log('Esse é um clique!');
   }
 
-  //Ao carregar a página ele pode executar alguma ação.
-  ngOnInit(): void {
-    console.log('Component OnInit');
-  }
+  //4 tipos de data binding
+  // Interpolação {{title}}
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('Component OnChanges');
-    this.title = 'Novo Título';
-  }
+  //Property Binding <img [src]="imgURL">
 
-  ngDoCheck(): void {
-    console.log('Component DoCheck');
-  }
+  //Event Binding <button (click)='chamarFuncao()'>
 
-  mudarTexto() {
-    this.title += 'a';
-  }
-
-  // ngOnDestroy(): void {
-  //   console.log('Component OnDestroy');    
-  // }
-
-  // ngAfterContentInit(): void {
-  // console.log('Component AfterContentInit');      
-  // }
-
-  // ngAfterViewInit(): void {
-  //   console.log('Component AfterViewInit');    
-  // }
-
-  // ngAfterContentChecked(): void {
-  //   console.log('Component ContentChecked');
-  // }
-
-  // ngAfterViewChecked(): void {
-  //   console.log('Component VierChecked');
-  // }
+  //Two-Way Data Binding 
 
 }
