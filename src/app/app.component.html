@@ -1,20 +1,4 @@
-<table>
+<app-toolbar></app-toolbar>
 
-    <th>Nome</th>
-    <th>Sexo</th>
-    <th>Idade</th>
-    <th>Salário</th>
-
-    <tr *ngFor="let cliente of clientes">
-        <td>{{cliente.nome | uppercase}}</td>
-        <td>{{cliente.sexo | sexo }}</td>
-        <td>{{cliente.idade}}</td>
-        <td>{{cliente.salario | currency: 'BRL'}}</td>
-    </tr>
-
-</table>
-
-<!-- Visualizando o dado na origem com o formato json -->
-<span>{{clientes | json}}</span>
 
 <router-outlet></router-outlet>
