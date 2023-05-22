@@ -8,6 +8,9 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { NovoComponent } from './componentes/novo/novo.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,14 +18,17 @@ import { HomeComponent } from './componentes/home/home.component';
     SexoPipe,
     ToolbarComponent,
     NovoComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
